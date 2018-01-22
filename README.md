@@ -1,3 +1,4 @@
+<img src = "https://github.com/drmartens/arJamMIT/blob/master/demoImage.JPG" width="50%">
 # AR Music Hackathon
 This is a demo project for the Parsons/MIT Media Lab/Berklee School of Music Augmented Reality + Music Hackathon/Workshop weekend in January 2018.
 
@@ -17,4 +18,6 @@ This is part of a larger demo project our team created to explore how we might a
 * Python Simple Server to resolve CORS issues
 
 ## Notes
-In order to get the custom markers to work, I needed to follow instructions from StackExchange to modify the code base of the AR.js library to allow for custom marker presets. You must include the Ar.js library saved in this folder, it will not work with a remote add in from their most current source. I also needed to write custom script to listen for each marker as an event trigger since this is not natively part of the AR.js app. This code is included in the index.js file.
+In order to get the custom markers to work, I first needed to follow[these instructions](https://github.com/wimvdc/AR.js/commit/950e82db6d0c3851647d429282c5ade52ee95891) to modify the code base of the AR.js library to allow for custom marker presets.You must include the Ar.js library saved in this folder, it will not work with a remote add in from their most current source. 
+
+I also used a [custom script from Don Mccurdy](https://github.com/donmccurdy/aframe-extras/issues/180) to register separate components for each of the 4 markers so that their appearance on camera could act as an event trigger since this is not natively part of the AR.js app. This code is included in the index.js file.
