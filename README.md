@@ -31,11 +31,14 @@ Here are the trigger images if you want to try this app out.
 Bassoon
 ![bassoonTrigger](https://github.com/drmartens/arJamMIT/blob/master/imageTriggerPhotosforTesting/bassoonTrigger.png)
 
+
 Oboe
 ![oboeTrigger](https://github.com/drmartens/arJamMIT/blob/master/imageTriggerPhotosforTesting/oboeTrigger.png)
 
+
 Viola
 ![violaTrigger](https://github.com/drmartens/arJamMIT/blob/master/imageTriggerPhotosforTesting/violaTrigger.png)
+
 
 Violin
 ![violinTrigger](https://github.com/drmartens/arJamMIT/blob/master/imageTriggerPhotosforTesting/violinTrigger.png)
