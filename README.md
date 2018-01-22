@@ -23,7 +23,7 @@ In order to get the custom markers to work, I first needed to follow [these inst
 
 I also used a [custom script from Don Mccurdy](https://github.com/donmccurdy/aframe-extras/issues/180) to register separate components for each of the 4 markers so that their appearance on camera could act as an event trigger since this is not natively part of the AR.js app. This code is included in the index.js file.
 
-The image markers are little trick as a-frame isn't quite as good as apps like Vuforia for registering custom images as markers. To use a custom marker, create a simple image, save as JPG or PNG and use the Ar.js Custom Marker Creator to create a pattern (.patt) file to train the program on this image. These .patt files must be included in the build for the images to work.
+The image markers are little tricky as a-frame isn't quite as good as apps like Vuforia for registering custom images as markers. To use a custom marker, create a simple image, save as JPG or PNG and use the [Ar.js Custom Marker Creator](https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html) to create a pattern (.patt) file to train the program on this image. These .patt files must be included in the build for the images to work.
 
 ## Trigger Images
 Here are the trigger images if you want to try this app out.
