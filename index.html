@@ -1,0 +1,113 @@
+<!-- Include A-Frame -->
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+<!-- Include ar.js -->
+<script src="aframe-ar.js"></script>
+<script>
+var audio = new Audio('countryRoad.mp3');
+var audio2 = new Audio('arSong.mp3');
+var oboeIn;
+var bassoonIn;
+var violaIn;
+var violinIn;
+
+//Component 1 - Bassoon
+
+AFRAME.registerComponent('markerhandler', { 
+tick:function() {
+ if(document.querySelector('#bassoonDiv').object3D.visible == true) {
+   bassoonIn = true;
+   console.log("The Bassoon is " + bassoonIn);
+  } 
+ else { 
+ bassoonIn = false;
+
+ }
+if (bassoonIn == true && oboeIn == true && violaIn == true && violinIn ==true){
+	console.log("MOMOMOMOMOM")
+	audio2.play();
+} else {
+  console.log('yo mama');
+}
+
+
+  } });
+
+//Component 2 - Oboe
+
+AFRAME.registerComponent('markerhandler2', { 
+tick:function() {
+ if(document.querySelector('#oboeDiv').object3D.visible == true) {
+   // audio2.play();
+   oboeIn = true;
+   console.log("The Oboe is " + oboeIn);
+  } 
+ else { 
+ oboeIn = false;
+
+ } } });
+
+
+//Component 3 - Viola
+AFRAME.registerComponent('markerhandler3', { 
+tick:function() {
+ if(document.querySelector('#violaDiv').object3D.visible == true) {
+   // audio2.play();
+   violaIn = true;
+   console.log("The Viola is " + violaIn);
+   // audio2.play();
+  } 
+ else { 
+ violaIn = false;
+    // audio2.pause();
+
+
+ } } });
+
+//Component 4 - Violin
+
+AFRAME.registerComponent('markerhandler4', { 
+tick:function() {
+ if(document.querySelector('#violinDiv').object3D.visible == true) {
+   console.log("The Violin is " + violinIn);
+   violinIn = true;
+  } 
+ else { 
+ violinIn = false;
+
+ } } });
+
+ </script>
+
+ <div id="arjsDebugUIContainer" visibility="hidden"></div>
+
+ <div id ='topBox' style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1; background-color:red;'>
+  <p style='color:black;'>Place all 4 Instruments in front of the Camera to play the piece!</p>
+</div>
+
+  <a-scene embeddedarjs>
+    <!--Content Here -->
+   
+    <!-- Custom Marker 1 - Bassoon -->
+  <a-marker id="bassoonDiv" preset='custom' url='bassoonSquares.patt'>
+  	  <a-box position='0 0.5 0' material="src: bassoonPattern.png; color: #696969; roughness: 1; metalness: 0" markerhandler></a-box>  
+  </a-marker>
+
+  <!-- Custom Marker 2 - Oboe -->
+
+   <a-marker id ="oboeDiv" preset='custom' url='oboeNew.patt'>
+  	  <a-box position='0 0.5 0' material="src: oboePattern.png; color: #696969; roughness: 1; metalness: 0" markerhandler2></a-box>  
+  </a-marker>
+
+  <!-- Custom Marker 3 - VIola -->
+  <a-marker id="violaDiv" preset='custom' url='violaTriangles.patt'>
+      <a-box position='0 0.5 0' material="src: violaPattern.png; color: #696969; roughness: 1; metalness: 0" markerhandler3></a-box>  
+  </a-marker>
+
+  <!-- Custom Marker 4 - Violin -->
+  <a-marker id="violinDiv" preset='custom' url='violinStars.patt'>
+      <a-box position='0 0.5 0' material="src: violinPattern.png; color: #696969; roughness: 1; metalness: 0" markerhandler4></a-box>  
+  </a-marker>
+
+
+</a-scene>
+</body>
