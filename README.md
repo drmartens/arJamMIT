@@ -1,4 +1,5 @@
 <img src = "https://github.com/drmartens/arJamMIT/blob/master/demoImage.JPG" width="50%">
+
 # AR Music Hackathon
 This is a demo project for the Parsons/MIT Media Lab/Berklee School of Music Augmented Reality + Music Hackathon/Workshop weekend in January 2018.
 
